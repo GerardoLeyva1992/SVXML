@@ -1,0 +1,50 @@
+<html layout:decorator="layout">
+
+<div layout:fragment="content">
+
+    <a class="btn btn-primary" href="/vuelos/new">Agregar un nuevo Vuelo</a>
+
+    <table class="table table-striped" id="vuelos_list">
+        <thead>
+        <tr>
+            <th>IdVuelo</th>
+            <th>HoraSalida</th>
+            <th>HoraLlegada</th>
+
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        
+        <h1>Vuelos</h1>
+        <tr data-th-each="post : ${vuelos}">
+         <td class="message" data-th-text="${post.idvuelo}"></td>
+            <td class="message" data-th-text="${post.horasalida}"></td>
+              <td class="message" data-th-text="${post.horallegada}"></td>
+  				<td class="message" data-th-text="${post.aeropuerto_idaeropuerto}"></td>
+         		<td class="message" data-th-text="${post.aeropuerto_idaeropuerto2}"></td>
+         		<td class="message" data-th-text="${post.avion_idavion}"></td>
+
+            <td>
+                <a th:href="@{'/vuelos/{idvuelo}/edit'(idvuelo=${post.idvuelo})}" class="edit" th:attr="name=${post.horasalida}">
+                    <span class="fa-stack">
+                        <i class="glyphicon glyphicon-edit"></i>
+                    </span>
+
+                </a>
+ 
+                
+            </td>
+              <!--   <td>
+                <a th:href="@{'/avions/{idavion}/delete'(idavion=${post.idavion})}" class="delete" th:attr="name=${post.modeloavion}">
+                        <span class="fa-stack">
+                            <i class="glyphicon glyphicon-trash"></i>
+                        </span>
+                </a>
+            </td> -->
+        </tr>
+        
+        </tbody>
+    </table>
+</div>
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+         <xs:element name="aeropuertos">
+               <xs:complexType>
+                     <xs:sequence>
+                           <xs:element name="aeropuerto" maxOccurs="unbounded">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="nombreaeropuerto"><xs:simpleType><xs:restriction base="xs:string"><xs:pattern value="([A-Z][a-z])+"/></xs:restriction></xs:simpleType></xs:element>
+                                             <xs:element name="ciudad" type="xs:string"></xs:element>
+                                             <xs:element name="pais" type="xs:string"></xs:element>
+                                       </xs:sequence>
+                                       <xs:attribute name="idaeropuerto" type="xs:long"></xs:attribute>
+                                 </xs:complexType>
+                           </xs:element>
+                     </xs:sequence>
+               </xs:complexType>
+         </xs:element>
+   </xs:schema>

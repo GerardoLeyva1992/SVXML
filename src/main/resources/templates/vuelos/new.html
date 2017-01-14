@@ -1,0 +1,40 @@
+<html layout:decorator="layout">
+    <div layout:fragment="content">
+        <form method="post" name="horasalida_form" id="horasalida_form" action="/vuelos/create" role="form">
+            <div class="form-group">
+                <label for="message">Hora Salida Vuelo</label>
+                <textarea rows="5" class="form-control" id="horasalida" name="horasalida"/>
+            </div>
+             
+             <form method="post" name="horallegada_form" id="horallegada_form" action="/vuelos/create" role="form">
+            <div class="form-group">
+                <label for="message">Hora Lllegada Vuelo</label>
+                <textarea rows="5" class="form-control" id="horallegada" name="horallegada"/>
+            </div>
+             
+               <form method="post" name="aeropuerto_idaeropuerto_form" id="aeropuerto_idaeropuerto_form" action="/vuelos/create" role="form">
+            <div class="form-group">
+                <label for="message">Aeropuerto Origen</label>
+                <textarea rows="5" class="form-control" id="aeropuerto_idaeropuerto" name="aeropuerto_idaeropuerto"/>
+            </div>
+                 <form method="post" name="aeropuerto_idaeropuerto2_form" id="aeropuerto_idaeropuerto2_form" action="/vuelos/create" role="form">
+            <div class="form-group">
+                <label for="message">Aeropuerto Destino</label>
+                <textarea rows="5" class="form-control" id="aeropuerto_idaeropuerto2" name="aeropuerto_idaeropuerto2"/>
+            </div>
+            <form method="post" name="avion_idavion_form" id="avion_idavion_form" action="/vuelos/create" role="form">
+            <div class="form-group">
+                <label for="message">Avion </label>
+                <textarea rows="5" class="form-control" id="avion_idavion" name="avion_idavion"/>
+            </div>
+            
+            
+            <button type="submit" id="submit" class="btn btn-primary">Agregar</button>
+            	
+            	</form>
+            	</form>
+            	</form>
+              </form>
+        </form>
+    </div>
+</html>

@@ -1,0 +1,23 @@
+<html layout:decorator="layout">
+    <div layout:fragment="content">
+        <form method="post" name="comment_form" id="comment_form" action="/posts/update" role="form">
+            <div class="form-group">
+                <label for="nombreaeropuerto">Aeropuerto</label>
+                <textarea rows="5" class="form-control" id="nombreaeropuerto" name="nombreaeropuerto" th:text="${post.nombreaeropuerto}"/>
+            </div>
+               <div class="form-group">
+                <label for="Ciudad">Ciudad</label>
+                <textarea rows="5" class="form-control" id="ciudad" name="ciudad" th:text="${post.ciudad}"/>
+            </div>
+              <div class="form-group">
+                <label for="pais">Pais</label>
+                <textarea rows="5" class="form-control" id="pais" name="pais" th:text="${post.pais}"/>
+            </div>
+       
+            
+            <input type="hidden" id="post_idaeropuerto" rows="5" class="form-control" name="post_idaeropuerto" th:value="${post.idaeropuerto}"/>
+            
+            <button type="submit" id="submit" class="btn btn-primary">Actulizar</button>
+        </form>
+    </div>
+</html>

@@ -1,0 +1,23 @@
+<html layout:decorator="layout">
+    <div layout:fragment="content">
+        <form method="post" name="vuelo_idvuelo_form" id="vuelo_idvuelo_form" action="/tripulaciones/create" role="form">
+            <div class="form-group">
+                <label for="message">Identificador del vuelo </label>
+                <textarea rows="5" class="form-control" id="vuelo_idvuelo" name="vuelo_idvuelo"/>
+            </div>
+             <form method="post" name="empleado_codigo_form" id="empleado_codigo_form" action="/tripulaciones/create" role="form">
+            <div class="form-group">
+                <label for="message">Codigo del emplelado</label>
+                <textarea rows="5" class="form-control" id="empleado_codigo" name="empleado_codigo"/>
+            </div>
+               <form method="post" name="puesto_form" id="puesto_form" action="/tripulaciones/create" role="form">
+            <div class="form-group">
+                <label for="message">Puesto del empleado en este vuelo o avion </label>
+                <textarea rows="5" class="form-control" id="puesto" name="puesto"/>
+            </div>
+            <button type="submit" id="submit" class="btn btn-primary">Agregar</button>
+            </form>
+            </form>
+        </form>
+    </div>
+</html>

@@ -1,0 +1,24 @@
+<html layout:decorator="layout">
+    <div layout:fragment="content">
+        <form method="post" name="comment_form" id="comment_form" action="/tripulaciones/update" role="form">
+            <div class="form-group">
+                <label for="vuelo_idvuelo">Identificador del vuelo</label>
+                <textarea rows="5" class="form-control" id="vuelo_idvuelo" name="vuelo_idvuelo" th:text="${post.vuelo_idvuelo}"/>
+            </div>
+               <div class="form-group">
+                <label for="empleado_codigo">Codigo del empleado</label>
+                <textarea rows="5" class="form-control" id="empleado_codigo" name="empleado_codigo" th:text="${post.empleado_codigo}"/>
+            </div>
+              <div class="form-group">
+                <label for="puesto">Puesto en el vuelo</label>
+                <textarea rows="5" class="form-control" id="puesto" name="puesto" th:text="${post.puesto}"/>
+            </div>
+       
+            
+            <input type="hidden" id="post_vuelo_idvuelo" rows="5" class="form-control" name="post_vuelo_idvuelo" th:value="${post.vuelo_idvuelo}"/>
+            <input type="hidden" id="post_empleado_codigo" rows="5" class="form-control" name="post_empleado_codigo" th:value="${post.empleado_codigo}"/>
+            
+            <button type="submit" id="submit" class="btn btn-primary">Actulizar</button>
+        </form>
+    </div>
+</html>

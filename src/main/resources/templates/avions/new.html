@@ -1,0 +1,23 @@
+<html layout:decorator="layout">
+    <div layout:fragment="content">
+        <form method="post" name="modeloavion_form" id="modeloavion_form" action="/avions/create" role="form">
+            <div class="form-group">
+                <label for="message">Avion</label>
+                <textarea rows="5" class="form-control" id="modeloavion" name="modeloavion"/>
+            </div>
+             <form method="post" name="capacidad_form" id="capacidad_form" action="/avions/create" role="form">
+            <div class="form-group">
+                <label for="message">Capacidad</label>
+                <textarea rows="5" class="form-control" id="capacidad" name="capacidad"/>
+            </div>
+               <form method="post" name="lineaaerea_form" id="lineaaerea_form" action="/avions/create" role="form">
+            <div class="form-group">
+                <label for="message">LineaAerea</label>
+                <textarea rows="5" class="form-control" id="lineaaerea" name="lineaaerea"/>
+            </div>
+            <button type="submit" id="submit" class="btn btn-primary">Agregar</button>
+            </form>
+            </form>
+        </form>
+    </div>
+</html>

@@ -1,0 +1,30 @@
+<html layout:decorator="layout">
+    <div layout:fragment="content">
+        <form method="post" name="comment_form" id="comment_form" action="/vuelos/update" role="form">
+            <div class="form-group">
+                <label for="horasalida">Hora Salida</label>
+                <textarea rows="5" class="form-control" id="horasalida" name="horasalida" th:text="${post.horasalida}"/>
+            </div>
+            <div class="form-group">
+                <label for="horallegada">Hora Llegada</label>
+                <textarea rows="5" class="form-control" id="horallegada" name="horallegada" th:text="${post.horallegada}"/>
+            </div>
+            <div class="form-group">
+                <label for="aeropuerto_idaeropuerto">Origen</label>
+                <textarea rows="5" class="form-control" id="aeropuerto_idaeropuerto" name="aeropuerto_idaeropuerto" th:text="${post.aeropuerto_idaeropuerto}"/>
+            </div>
+            <div class="form-group">
+                <label for="aeropuerto_idaeropuerto2">Destino</label>
+                <textarea rows="5" class="form-control" id="aeropuerto_idaeropuerto2" name="aeropuerto_idaeropuerto2" th:text="${post.aeropuerto_idaeropuerto2}"/>
+            </div>
+               <div class="form-group">
+                <label for="avion_idavion">Avion</label>
+                <textarea rows="5" class="form-control" id="avion_idavion" name="avion_idavion" th:text="${post.avion_idavion}"/>
+            </div>
+             
+            <input type="hidden" id="post_idvuelo" rows="5" class="form-control" name="post_idvuelo" th:value="${post.idvuelo}"/>
+      
+            <button type="submit" id="submit" class="btn btn-primary">Actualizar</button>
+        </form>
+    </div>
+</html>

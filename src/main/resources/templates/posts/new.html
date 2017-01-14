@@ -1,0 +1,23 @@
+<html layout:decorator="layout">
+    <div layout:fragment="content">
+        <form method="post" name="nombreaeropuerto_form" id="nombreaeropuerto_form" action="/posts/create" role="form">
+            <div class="form-group">
+                <label for="message">Aeropuerto</label>
+                <textarea rows="5" class="form-control" id="nombreaeropuerto" name="nombreaeropuerto"/>
+            </div>
+             <form method="post" name="ciudad_form" id="ciudad_form" action="/posts/create" role="form">
+            <div class="form-group">
+                <label for="message">Ciudad</label>
+                <textarea rows="5" class="form-control" id="ciudad" name="ciudad"/>
+            </div>
+               <form method="post" name="pais_form" id="pais_form" action="/posts/create" role="form">
+            <div class="form-group">
+                <label for="message">Pais</label>
+                <textarea rows="5" class="form-control" id="pais" name="pais"/>
+            </div>
+            <button type="submit" id="submit" class="btn btn-primary">Agregar</button>
+            </form>
+            </form>
+        </form>
+    </div>
+</html>

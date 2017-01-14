@@ -1,0 +1,46 @@
+<html layout:decorator="layout">
+
+<div layout:fragment="content">
+
+    <a class="btn btn-primary" href="/posts/new">Agregar un nuevo Aeropuerto</a>
+
+    <table class="table table-striped" id="posts_list">
+        <thead>
+        <tr>
+            <th>Aeropuerto</th>
+            <th>Borrar o Editar</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <h1>Aeropuertos</h1>
+        <tr data-th-each="post : ${posts}">
+                    <td class="message" data-th-text="${post.idaeropuerto}"></td>
+            <td class="message" data-th-text="${post.nombreaeropuerto}"></td>
+              <td class="message" data-th-text="${post.ciudad}"></td>
+  				<td class="message" data-th-text="${post.pais}"></td>
+         
+
+            <td>
+                <a th:href="@{'/posts/{idaeropuerto}/edit'(idaeropuerto=${post.idaeropuerto})}" class="edit" th:attr="name=${post.nombreaeropuerto}">
+                    <span class="fa-stack">
+                        <i class="glyphicon glyphicon-edit"></i>
+                    </span>
+
+                </a>
+ 
+                
+            </td>
+               <td>
+                <a th:href="@{'/posts/{idaeropuerto}/delete'(idaeropuerto=${post.idaeropuerto})}" class="delete" th:attr="name=${post.nombreaeropuerto}">
+                        <span class="fa-stack">
+                            <i class="glyphicon glyphicon-trash"></i>
+                        </span>
+                </a>
+            </td>
+        </tr>
+           
+        </tbody>
+    </table>
+</div>
+</html>

@@ -1,0 +1,21 @@
+<html layout:decorator="layout">
+    <div layout:fragment="content">
+        <form method="post" name="comment_form" id="comment_form" action="/avions/update" role="form">
+            <div class="form-group">
+                <label for="nombreaeropuerto">Avion</label>
+                <textarea rows="5" class="form-control" id="modeloavion" name="modeloavion" th:text="${post.modeloavion}"/>
+            </div>
+               <div class="form-group">
+                <label for="Ciudad">Capacidad</label>
+                <textarea rows="5" class="form-control" id="capacidad" name="capacidad" th:text="${post.capacidad}"/>
+            </div>
+              <div class="form-group">
+                <label for="pais">LineaAerea</label>
+                <textarea rows="5" class="form-control" id="lineaaerea" name="lineaaerea" th:text="${post.lineaaerea}"/>
+            </div>
+            <input type="hidden" id="post_idavion" rows="5" class="form-control" name="post_idavion" th:value="${post.idavion}"/>
+          
+            <button type="submit" id="submit" class="btn btn-primary">Actualizar</button>
+        </form>
+    </div>
+</html>

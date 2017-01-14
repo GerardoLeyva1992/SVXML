@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<aeropuertos>
+    <aeropuerto idaeropuerto="501">
+        <nombreaeropuerto>Aero</nombreaeropuerto>
+        <ciudad>s</ciudad>
+        <pais>ss</pais>
+    </aeropuerto>
+    <aeropuerto idaeropuerto="502">
+        <nombreaeropuerto>LALALA</nombreaeropuerto>
+        <ciudad>s</ciudad>
+        <pais>ss</pais>
+    </aeropuerto>
+</aeropuertos>
