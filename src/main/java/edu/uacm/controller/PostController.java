@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import edu.uacm.dao.AeropuertoDao;
 import edu.uacm.domain.AeropuertoRepository;
 import edu.uacm.domain.Aeropuertos;
 import edu.uacm.domain.Aeropuertos.Aeropuerto;
@@ -26,17 +27,48 @@ import edu.uacm.domain.ObjectFactory;
 @RequestMapping("/posts")
 public class PostController {
 	private final Logger log = LoggerFactory.getLogger(this.getClass());
-
+	@Autowired
+	private AeropuertoDao dao;
 
     @Autowired
     private AeropuertoRepository repository;
 
+    /*
     @RequestMapping(value="", method=RequestMethod.GET)
-    public String listPosts(Model model) {
-        model.addAttribute("posts", repository.findAll());
-        return "posts/list";
-    }
+    public String listPosts(Model model,long idaeropuerto) {
+    	//Aeropuerto a=dao.getById(idaeropuerto);
+		log.debug("Entrando a DAOS");
 
+    	model.addAttribute("posts", dao.getById(idaeropuerto));
+        //model.addAttribute("posts", repository.findAll());
+		log.debug("Saliendo de DAOS");
+
+        return "posts/list2";
+    }
+    */
+    
+    @RequestMapping(value="", method=RequestMethod.GET)
+    public String lisPosts(Model model) {
+    //	Aeropuerto a=dao.getById(ideaeropuerto);
+    	model.addAttribute("posts", repository.findAll());
+      //  model.
+    	return "posts/list";
+    }
+    @RequestMapping(value = "/ByIdC", method = RequestMethod.POST)
+    public String ByIdC(Model model,@RequestParam("idaeropuerto") long idaeropuerto){
+//    	Aeropuerto a=dao.getById(idaeropuerto);
+    	model.addAttribute("posts", dao.getById(idaeropuerto));
+    	return  "posts/list2";
+    }
+    
+    /*
+    @RequestMapping(value="/listPostsByID", method=RequestMethod.POST)
+    public ModelAndView listPostsByID(@PathVariable long idaeropuerto) {
+    	Aeropuerto a=dao.getById(idaeropuerto);
+        return new ModelAndView("redirect:/posts/list2");
+    }
+    */
+    
     @RequestMapping(value = "/{idaeropuerto}/delete", method = RequestMethod.GET)
     public ModelAndView delete(@PathVariable long idaeropuerto) {
         repository.delete(idaeropuerto);
@@ -71,7 +103,12 @@ public class PostController {
 		jaxbMarshaller.marshal(aeropuertos, new File("src\\xmls\\Aeropuertos.xml"));
         return new ModelAndView("redirect:/posts");
     }
+   
 
+    
+    
+    
+    
     @RequestMapping(value = "/update", method = RequestMethod.POST)
     public ModelAndView update(@RequestParam("post_idaeropuerto") long idaeropuerto,
                                @RequestParam("nombreaeropuerto") String nombreaeropuerto,
@@ -92,6 +129,10 @@ public class PostController {
         model.addAttribute("post", post);
         return "posts/edit";
     }
-
+    
+    @RequestMapping(value = "/new2", method = RequestMethod.GET)
+    public String ById(Model model) {
+        return "posts/new2";
+    }
 
 }

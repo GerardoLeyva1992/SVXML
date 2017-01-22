@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <aeropuertos>
-    <aeropuerto idaeropuerto="532">
-        <nombreaeropuerto>a</nombreaeropuerto>
-        <ciudad>a</ciudad>
-        <pais>a</pais>
+    <aeropuerto idaeropuerto="602">
+        <nombreaeropuerto>Puto</nombreaeropuerto>
+        <ciudad>Souza</ciudad>
+        <pais>Pirruu</pais>
     </aeropuerto>
 </aeropuertos>

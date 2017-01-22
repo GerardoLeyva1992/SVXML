@@ -23,10 +23,12 @@ import edu.uacm.domain.Aeropuertos.Aeropuerto;
 @SpringApplicationConfiguration(classes=Application.class)
 @WebAppConfiguration
 public class ObjectFactoryTest {
-	@Autowired
-	AeropuertoRepository ae;
+	//@Autowired
+	//AeropuertoRepository ae;
+	
 	@Test
-	public void testCreateClientes() throws JAXBException {
+	public void testCreateClientes()  {
+	/*
 		Aeropuertos aeropuertos = new ObjectFactory().createAeropuertos();
 	
 		Aeropuerto aero = new Aeropuerto();
@@ -52,5 +54,9 @@ public class ObjectFactoryTest {
 		jaxbMarshaller.marshal(aeropuertos, System.out);
 		
 		jaxbMarshaller.marshal(aeropuertos, new File("C:/Users/GerardoPC/Desktop/SVXML/src/main/java/data/prueba.xml"));
+	
+	*/
 	}
+	
+
 }

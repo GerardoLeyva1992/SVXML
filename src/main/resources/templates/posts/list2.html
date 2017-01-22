@@ -2,9 +2,7 @@
 
 <div layout:fragment="content">
 
-    <a class="btn btn-primary" href="/posts/new">Agregar un nuevo Aeropuerto</a>
-        <a class="btn btn-primary" href="/posts/new2">Buscar por ID</a>
-    
+    <a class="btn btn-primary" href="/posts/new2">Buscar por ID</a>
 
     <table class="table table-striped" id="posts_list">
         <thead>
@@ -17,12 +15,11 @@
         <tbody>
         <h1>Aeropuertos</h1>
         <tr data-th-each="post : ${posts}">
-                    <td class="message" data-th-text="${post.idaeropuerto}"></td>
             <td class="message" data-th-text="${post.nombreaeropuerto}"></td>
-              <td class="message" data-th-text="${post.ciudad}"></td>
-  				<td class="message" data-th-text="${post.pais}"></td>
-         
-
+                          <td class="message" data-th-text="${post.ciudad}"></td>
+            
+       
+	<!--  
             <td>
                 <a th:href="@{'/posts/{idaeropuerto}/edit'(idaeropuerto=${post.idaeropuerto})}" class="edit" th:attr="name=${post.nombreaeropuerto}">
                     <span class="fa-stack">
@@ -40,6 +37,7 @@
                         </span>
                 </a>
             </td>
+            -->
         </tr>
            
         </tbody>
